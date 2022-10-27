@@ -14,11 +14,11 @@ export class FeriadosPage implements OnInit {
   constructor(private feriadosService: FeriadosService) { }
 
   ngOnInit() {
+    //rescatamos los datos de la API REST
     this.feriadosService.getFeriados().subscribe(resp => {
       console.log('feriados', resp);
       this.feriado = resp;
       console.log(this.feriado);
-      //this.feriado.push('feriados', resp); //no tira error aqui pero si al compilar
     });
 
   }

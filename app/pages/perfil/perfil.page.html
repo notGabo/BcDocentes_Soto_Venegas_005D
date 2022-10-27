@@ -23,7 +23,11 @@
         <ion-label class="textLabel">Correo</ion-label>
         <p class="textData">{{getCorreo()}}</p>
       </ion-item>
+      
     </ion-card-content>
     <!-- Aquí va el botón que cierra sesion -->
   </ion-card>
+  <ion-button (click)="logOut()" expand="full" shape="round" color="tertiary">
+    Cerrar sesión
+  </ion-button>
 </ion-content>

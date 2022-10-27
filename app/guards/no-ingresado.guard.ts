@@ -11,11 +11,10 @@ export class NoIngresadoGuard implements CanActivate {
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if(localStorage.getItem('Ingresar')=='true'){
-        this.navController.navigateRoot('inicio')
+      if(localStorage.getItem('Ingresar') == 'true'){
+        this.navController.navigateRoot('/inicio')
         return false; 
       }else{
-        
         return true;
       }
   }

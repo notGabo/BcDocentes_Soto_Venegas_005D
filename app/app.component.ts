@@ -43,12 +43,6 @@ export class AppComponent {
       name: 'Noticias',
       redirectTo: '/noticias'
     },
-    {
-      icon: 'log-out-outline',
-      name: 'Cerrar sesión',
-      redirectTo: '/intro'
-    }
-
   ];
 
   public hasMenu = true;

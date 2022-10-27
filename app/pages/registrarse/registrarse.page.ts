@@ -18,8 +18,7 @@ export class RegistrarsePage implements OnInit {
   constructor(private alertController: AlertController,
     private registroProfesorService: RegistroProfesorService,
     private fb: FormBuilder,
-    private toastController: ToastController,
-    private navController: NavController) {
+    private toastController: ToastController) {
     this.formularioRegistro = this.fb.group({
       'nombre': new FormControl("", Validators.required),
       'apellido': new FormControl("", Validators.required),
@@ -50,7 +49,6 @@ export class RegistrarsePage implements OnInit {
     this.newProfesor.apellidoProfesor = form.apellido.charAt(0).toUpperCase() + form.apellido.slice(1).toLowerCase();
     this.registroProfesorService.addProfesor(this.newProfesor).then(dato => {
       this.newProfesor = <Profesor>{};
-      this.alertRegistro();
       this.showtoast('Usuario Creado');
     });
     this.formularioRegistro.reset();
@@ -90,28 +88,6 @@ export class RegistrarsePage implements OnInit {
       }
     });
   };
-
-  async alertRegistro() {
-    const alertRegistro = await this.alertController.create({
-      header: '¡Cuenta creada!',
-      message: '¿Deseas loguearte?',
-      buttons: [
-        {
-          text: 'Si',
-          role: 'Confirm',
-          handler: () => {
-            this.navController.navigateForward('/login');
-          },
-        },
-        {
-          text: 'No',
-          role: 'Cancel'
-        }
-      ],
-      cssClass: 'alertcss'
-    })
-    await alertRegistro.present();
-  }
 
 
   async alertEmail() {
