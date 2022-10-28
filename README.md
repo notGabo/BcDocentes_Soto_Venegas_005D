@@ -34,7 +34,6 @@ Existe la posibilidad de que la Api de los feriados no cargue como se deba. Por 
 https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
 Una vez instalada, solo se debe activar desde el panel de extensiones.
 
-
 Ya hecho esto, es posible emular la aplicacion mediante el browser preferido. Para poder hacerlo solo debemos ejecutar en la terminal:
 
 ```ionic serve --lab```
