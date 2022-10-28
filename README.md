@@ -22,7 +22,7 @@ con:
 
   ```git clone https://github.com/notGabo/BcDocentes_Soto_Venegas_005D.git```
   
-Una vez hecho esto, deberas eliminar la carpeta llamada 'src' y reemplazar el nombre de la carpeta 'BcAlumnos_Soto_Venegas_005D' por 'src'.
+Una vez hecho esto, deberas eliminar la carpeta llamada 'src' y reemplazar el nombre de la carpeta 'BcDocentes_Soto_Venegas_005D' por 'src'.
 
 Luego de todo ese procedimiento, se necesitaran instalar los siguientes modulos para el debido funcionamiento de la aplicacion
 
